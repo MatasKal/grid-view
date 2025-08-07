@@ -22,7 +22,7 @@ export default function ButtonGrid() {
 		return {
 			element: (
 				<button
-					className={` bg-green-50 transition-colors ease-out duration-300 rounded-md lg:rounded-2xl w-full h-full block ${
+					className={` bg-green-50 ease-out duration-300 rounded-md lg:rounded-2xl w-full h-full block ${
 						isButtonActive ? "bg-purple-500" : "bg-purple-200"
 					}`}
 					onClick={() => {
