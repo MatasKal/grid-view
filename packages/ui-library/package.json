@@ -4,12 +4,6 @@
 	"version": "0.0.0",
 	"type": "module",
 	"main": "src/index.ts",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc -b && vite build",
-		"lint": "eslint .",
-		"preview": "vite preview"
-	},
 	"dependencies": {
 		"react": "^19.1.1",
 		"react-dom": "^19.1.1"
