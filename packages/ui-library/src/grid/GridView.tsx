@@ -54,6 +54,7 @@ export default function GridView({
 	// Validate rows and columns
 	const validRows = rows && rows > 0 ? rows : DEFAULT_ROWS;
 	const validColumns = columns && columns > 0 ? columns : DEFAULT_COLUMNS;
+	const totalCells = validRows * validColumns;
 
 	// Only render if there are elements or children
 	if (!elements.length && !children) {
@@ -64,11 +65,7 @@ export default function GridView({
 	let renderedElements;
 
 	if (elements.length) {
-		renderedElements = elements.map((item, index) => {
-			if (index >= validRows * validColumns || !item.element) {
-				return null;
-			}
-
+		renderedElements = elements.slice(0, totalCells).map((item, index) => {
 			return (
 				<div
 					key={index}
@@ -83,13 +80,8 @@ export default function GridView({
 			);
 		});
 	} else {
-		renderedElements = React.Children.toArray(children).map((child, index) => {
-			if (index >= validRows * validColumns) {
-				return null;
-			}
-
-			return child;
-		});
+		renderedElements = React.Children.toArray(children).slice(0, totalCells);
+		console.log(renderedElements);
 	}
 
 	return (

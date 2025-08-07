@@ -60,6 +60,6 @@ export default function ButtonGrid() {
 			elements={buttons}
 			classNames="p-5 rounded-2xl border-2 border-gray-200"
 			gap="gap-3"
-		></GridView>
+		/>
 	);
 }
