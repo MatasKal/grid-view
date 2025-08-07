@@ -72,7 +72,6 @@ export default function GridView({
 					style={{
 						gridRow: item.row,
 						gridColumn: item.column,
-						height: "max-content",
 					}}
 				>
 					{item.element}

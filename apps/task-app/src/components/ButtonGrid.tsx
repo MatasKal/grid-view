@@ -22,7 +22,7 @@ export default function ButtonGrid() {
 		return {
 			element: (
 				<button
-					className={` bg-green-50 transition-colors ease-out duration-300 rounded-2xl w-28 h-28 block ${
+					className={` bg-green-50 transition-colors ease-out duration-300 rounded-md sm:rounded-xl w-full h-full block m- ${
 						isButtonActive ? "bg-purple-500" : "bg-purple-200"
 					}`}
 					onClick={() => {
@@ -58,7 +58,7 @@ export default function ButtonGrid() {
 			rows={3}
 			columns={3}
 			elements={buttons}
-			classNames="p-5 rounded-2xl border-2 border-gray-200"
+			classNames="p-5 rounded-2xl border-2 border-gray-200 w-full max-w-[500px] m-8 aspect-square"
 			gap="gap-3"
 		/>
 	);
