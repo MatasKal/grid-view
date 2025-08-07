@@ -54,14 +54,12 @@ export default function ButtonGrid() {
 	}
 
 	return (
-		<div className="h-dvh w-dvw flex items-center justify-center">
-			<GridView
-				rows={3}
-				columns={3}
-				elements={buttons}
-				classNames="p-5 rounded-2xl border-2 border-gray-200"
-				gap="gap-2"
-			></GridView>
-		</div>
+		<GridView
+			rows={3}
+			columns={3}
+			elements={buttons}
+			classNames="p-5 rounded-2xl border-2 border-gray-200"
+			gap="gap-2"
+		></GridView>
 	);
 }

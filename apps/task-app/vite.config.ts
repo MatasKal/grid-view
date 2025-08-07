@@ -10,4 +10,5 @@ export default defineConfig({
 			"@ui-library": "/packages/ui-library/src/**/*",
 		},
 	},
+	base: "/grid-view/",
 });
